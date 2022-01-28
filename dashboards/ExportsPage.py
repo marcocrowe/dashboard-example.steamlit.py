@@ -1,4 +1,4 @@
-from pandas import read_csv, DataFrame
+from pandas import read_csv, DataFrame, to_datetime
 from matplotlib import pyplot
 import streamlit
 
@@ -7,6 +7,8 @@ filepath: str = "./assets/cso-tsa04-cattle-beef-exports-eda-output.csv"
 
 def show_explore_page():
     exports_dataframe: DataFrame = read_csv(filepath)
+    exports_dataframe = exports_dataframe.set_index('Year')
+    exports_dataframe.index = to_datetime(exports_dataframe.index, format='%Y')
 
     streamlit.header("Exports")
 
@@ -15,8 +17,6 @@ def show_explore_page():
 
     streamlit.subheader("Stats")
     streamlit.dataframe(exports_dataframe.describe())
-
-    exports_dataframe = exports_dataframe.set_index('Year')
 
     streamlit.subheader("Graph")
     streamlit.line_chart(exports_dataframe, use_container_width=True)
