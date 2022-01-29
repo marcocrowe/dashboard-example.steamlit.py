@@ -9,7 +9,7 @@
 1. Clone the repository:
 ```bash
 $ git clone https://github.com/markcrowe-com/dashboard-example.steamlit.py.git
-$ cd dashboard-example.steamlit.py.git
+$ cd dashboard-example.steamlit.py
 ```
 
 2. Install dependencies:
@@ -19,7 +19,7 @@ $ pip install -r requirements.txt
 
 3. Start the application:
 ```bash
-streamlit run app.py
+streamlit run streamlit_app.py
 ```
 
 ## Recommended IDEs
