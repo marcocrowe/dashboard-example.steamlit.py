@@ -1,4 +1,4 @@
-# [Streamlit Dashboard Example](https://github.com/markcrowe-com/Dashboard.steamlit.py/) [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/markcrowe-com/dashboard-example.steamlit.py/master/app.py) 
+# [Streamlit Dashboard Example](https://github.com/markcrowe-com/Dashboard.steamlit.py/) [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/markcrowe-com/dashboard-example.steamlit.py/master/streamlit_app.py) 
 
 ## Requirements
 - [Python >= 3.10.0](https://www.python.org/downloads/)
