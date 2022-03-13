@@ -5,7 +5,11 @@ page = streamlit.sidebar.selectbox(
     "Choose Page", ["Summary Stats"])
 
 if page == 'Summary Stats':
-    ExportsPage.show_explore_page()
     query_params = streamlit.experimental_get_query_params()
+    streamlit.header("QueryString")
     streamlit.write(query_params)
-    #query_option = query_params['option'][0] 
+    query_option = query_params['filename'][0] 
+    streamlit.write(query_option)
+
+    ExportsPage.show_explore_page()
+    
