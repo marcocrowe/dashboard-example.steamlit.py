@@ -1,15 +1,15 @@
 import streamlit
-import streamlit.components.v1 as components
+from dashboards import ExportsPage
 
-query_params = streamlit.experimental_get_query_params()
-filename = query_params['filename'][0] 
+page = streamlit.sidebar.selectbox(
+    "Choose Page", ["Summary Stats"])
 
-import json
+if page == 'Summary Stats':
+    streamlit.header("QueryString")
+    query_params = streamlit.experimental_get_query_params()
+    streamlit.write(query_params)
+    filename = query_params['filename'][0] 
+    streamlit.write(filename)
 
-obj = {"filename": filename, "result": 'flower'}
-
-#streamlit.write(obj)
-
-#streamlit.write(json.dumps(obj))
-
-components.html(obj)
+    ExportsPage.show_explore_page()
+    
